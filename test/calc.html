@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Calc Tests</title>
-    </head>
-    <body>
+
+<head>
+    <meta charset="utf-8">
+    <title>Calc Tests</title>
+
+    <link href='../node_modules/mocha/mocha.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <main id='mocha'></main>
 
 
+    <script src='../node_modules/mocha/mocha.js'></script>
+    <script src='../node_modules/chai/chai.js'></script>
 
-    </body>
+
+    <script src='../src/js/calc.js'></script>
+
+    <script>
+        mocha.setup('bdd');
+    </script>
+    <script src='specs/calc.spec.js'></script>
+
+    <script>
+        mocha.run();
+    </script>
+</body>
+
 </html>
