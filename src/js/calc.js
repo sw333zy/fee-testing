@@ -14,13 +14,18 @@
         var total = 0;
 
         if (!numbers) {
-            return total;
+            return NaN;
+        }
+
+        else if (typeof (numbers)  === 'string'   ) {
+          return (numbers);
         }
 
         numbers.forEach(function addThem(num) {
             total += num;
         });
         return total;
+
     }
 
     /**
@@ -31,18 +36,31 @@
      * @param  {Number} topNumber  The number to get the factorial value for
      * @return {Number}            The final factorial value
      */
+
+    window.calc.factorial = factorial;
     function factorial(topNumber) {
         var i;
-        var total = 0;
+        var total = 1;
+
 
         if (typeof(topNumber) !== 'number') {
-            return 0;
+            return NaN;
         }
+
+        // else if (typeof(topNumber) === 'string') {
+        //   return(topNumber);
+        // }
 
         for (i=1; i<=topNumber; i++) {
             total *= i;
         }
+
+
         return total;
-    }
+        }
+
+
+
+
 
 })();
